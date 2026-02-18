@@ -6,6 +6,9 @@
 *.sln.docstates
 *.env
 
+# IDE files
+.idea/
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
