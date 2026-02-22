@@ -45,3 +45,26 @@ type Customer =
     | VIAStaff of ViaCustomerInfo
     | VIAStudent of ViaCustomerInfo
     | Guest of GuestInfo
+    // ----- Value validation -----
+
+let validateCustomerId (CustomerId id) =
+    id <> Guid.Empty
+
+let validateViaId (ViaId id) =
+    not (isBlank id) && id.Length = 6
+
+let validatePhoneNumber (PhoneNumber phone) =
+    not (isBlank phone)
+    && phone.Length = 8
+    && (phone |> Seq.forall Char.IsDigit)
+
+let validateEmail (Email e) =
+    not (isBlank e)
+    && e.Contains("@")
+    && e.Contains(".")
+
+
+let validateName (name: CustomerName) =
+    not (isBlank name.FirstName)
+    && not (isBlank name.LastName)
+
