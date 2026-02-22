@@ -20,3 +20,29 @@ type Juice =
     | OrangeJuice
     | AppleJuice
     | GrapeJuice
+
+// Drinks summarized
+type Drink =
+    | Coffee of Coffee
+    | Tea of Tea
+    | Juice of Juice
+
+// Helper records for drinks to make price calculation easier
+type DrinkRecord =
+    {category: Drink; basePrice: double}
+
+// Restrict sizes
+type Size = 
+    | Small
+    | Medium
+    | Large
+
+// Helper for calculations
+type SizeRecord =
+    {size: Size; priceMultiplier: double}
+
+// The product
+type Product = 
+    | Beverage of DrinkRecord * SizeRecord
+    | Food of string * double
+    | Fruit of string * double
