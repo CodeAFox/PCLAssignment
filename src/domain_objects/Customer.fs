@@ -1,5 +1,10 @@
 module PCLAssignment.domain_objects.Customer
 
+open System
+
+let isBlank (value: string) =
+    String.IsNullOrWhiteSpace value
+
 type CustomerId = CustomerId of Guid
 type ViaId = ViaId of string
 type PhoneNumber = PhoneNumber of string
@@ -67,4 +72,3 @@ let validateEmail (Email e) =
 let validateName (name: CustomerName) =
     not (isBlank name.FirstName)
     && not (isBlank name.LastName)
-
