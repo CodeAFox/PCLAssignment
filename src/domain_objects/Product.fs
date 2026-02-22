@@ -46,3 +46,10 @@ type Product =
     | Beverage of DrinkRecord * SizeRecord
     | Food of string * double
     | Fruit of string * double
+
+let calculatePrice (item:Product) = 
+    match item with 
+        | Food(name, price) -> price 
+        | Fruit(name, price) -> price
+        | Beverage(drink, size) ->
+            drink.basePrice * size.priceMultiplier
