@@ -6,18 +6,17 @@ open PCLAssignment.domain_objects.Product
 open PCLAssignment.domain_objects.Payment
 open PCLAssignment.domain_objects.OrderStatus
 
-
-type Order = 
+type Order =
     { OrderId: Guid
-      CustomerId: CustomerId 
+      CustomerId: CustomerId
       Products: Product list
       Status: Status
       Payment: PaymentType }
-    
-type OrderDrinkMsg  = 
+
+type OrderDrinkMsg =
     | OrderDrink of DrinkRecord * SizeRecord
-    | Comment of string
- 
+    | LeaveComment of string
+
 type OrderProductMsg =
-      | OrderProduct of Product * int
-      | Comment of string  
+    | OrderProduct of Product * int
+    | LeaveProductComment of string
