@@ -2,7 +2,7 @@ module PCLAssignment.domain_objects.Payment
 
 open System
 
-type payment =
+type PaymentType =
     | MobilePay of string 
     | CreditCard of string * string * string * DateTime
     | VIACard of string

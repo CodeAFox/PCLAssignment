@@ -7,9 +7,11 @@
 
   <ItemGroup>
     <Compile Include="Program.fs" />
+    <Compile Include="domain_objects\OrderStatus.fs" />
     <Compile Include="domain_objects\Customer.fs" />
     <Compile Include="domain_objects\Payment.fs" />
     <Compile Include="domain_objects\Product.fs" />
+    <Compile Include="domain_objects\Order.fs" />
   </ItemGroup>
 
 </Project>

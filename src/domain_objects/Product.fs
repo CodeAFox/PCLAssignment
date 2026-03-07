@@ -53,3 +53,7 @@ let calculatePrice (item:Product) =
         | Fruit(name, price) -> price
         | Beverage(drink, size) ->
             drink.basePrice * size.priceMultiplier
+
+let gtgVAT n x =
+    let rate = float(n) / 100.0
+    x * (1.0 + rate)
