@@ -12,6 +12,7 @@
     <Compile Include="domain_objects\Payment.fs" />
     <Compile Include="domain_objects\Product.fs" />
     <Compile Include="domain_objects\Order.fs" />
+    <Compile Include="domain_objects\OrderAgent.fs" />
   </ItemGroup>
 
 </Project>
