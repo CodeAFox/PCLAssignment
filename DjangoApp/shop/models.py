@@ -47,3 +47,23 @@ class Payment(models.Model):
 class Order(models.Model):
     order_status = models.IntegerField(choices=ORDER_STATUSES, default=0)
     payment = models.ForeignKey(Payment, on_delete=models.SET_NULL, null=True)
+
+class Category(models.Model):
+    name = models.CharField(max_length=100)
+
+    class Meta:
+        verbose_name_plural = "Categories"
+
+    def __str__(self):
+        return self.name
+
+class Product(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField(blank=True)
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
+    image = models.ImageField(upload_to='products/', blank=True, null=True)
+    available = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.name

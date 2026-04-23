@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta />
+    charset="UTF-8" /
+    <title>GTG Café</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        background: #f7f3ee;
+      }
+      h1 {
+        color: #3e2723;
+      }
+      .products {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .product {
+        background: white;
+        border-radius: 8px;
+        padding: 20px;
+        width: 220px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+      .product h2 {
+        margin: 0 0 10px;
+        font-size: 1.2em;
+        color: #5d4037;
+      }
+      .price {
+        font-weight: bold;
+        color: #6d4c41;
+      }
+      .category {
+        font-size: 0.85em;
+        color: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>☕ GTG Café — Menu</h1>
+
+    {% if products %}
+    <div class="products">
+      {% for product in products %}
+      <div class="product">
+        <h2>{{ product.name }}</h2>
+        <p class="category">{{ product.category }}</p>
+        <p>{{ product.description }}</p>
+        <p class="price">{{ product.price }} DKK</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p>No products available yet.</p>
+    {% endif %}
+  </body>
+</html>
