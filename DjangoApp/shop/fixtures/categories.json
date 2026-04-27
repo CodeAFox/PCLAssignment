@@ -1,0 +1,20 @@
+[
+  {
+    "model": "shop.category",
+    "fields": {
+      "name": "Tea"
+    }
+  },
+  {
+    "model": "shop.category",
+    "fields": {
+      "name": "Coffee"
+    }
+  },
+  {
+    "model": "shop.category",
+    "fields": {
+      "name": "Juice"
+    }
+  }
+]

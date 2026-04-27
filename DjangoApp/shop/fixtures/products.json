@@ -1,0 +1,48 @@
+[
+  {
+    "model": "shop.category",
+    "fields": {
+      "name": "Oolong Tea",
+      "description": "Oolong tea",
+      "price": 4.0,
+      "category": "Tea"
+    }
+  },
+  {
+    "model": "shop.category",
+    "fields": {
+      "name": "White Tea",
+      "description": "White tea",
+      "price": 5.0,
+      "category": "Tea"
+    }
+  },
+  {
+    "model": "shop.category",
+    "fields": {
+      "name": "Oolong Tea",
+      "description": "Oolong tea",
+      "price": 4.0,
+      "category": "Tea"
+    }
+  },
+  {
+    "model": "shop.category",
+    "fields": {
+      "name": "Oolong Tea",
+      "description": "Oolong tea",
+      "price": 4.0,
+      "category": "Tea"
+    }
+  },
+  {
+    "model": "shop.category",
+    "fields": {
+      "name": "Black Tea",
+      "description": "Oolong tea",
+      "price": 3.0,
+      "category": "Tea",
+      "available": false
+    }
+  }
+]
